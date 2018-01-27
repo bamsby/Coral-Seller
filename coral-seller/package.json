@@ -21,6 +21,16 @@
   "dependencies": {
     "expo": "^23.0.4",
     "react": "16.0.0",
-    "react-native": "0.50.3"
+    "react-native": "0.50.3",
+    "react-native-datepicker": "^1.6.0",
+    "react-native-modal": "^5.0.0",
+    "react-native-platform-touchable": "^1.1.1",
+    "react-native-progress": "^3.4.0",
+    "react-native-progress-bar": "^0.1.2",
+    "react-native-qrcode": "^0.2.6",
+    "react-native-router-flux": "^4.0.0-beta.28",
+    "react-redux": "^5.0.6",
+    "react-thunk": "^1.0.0",
+    "teaset": "^0.5.5"
   }
 }
