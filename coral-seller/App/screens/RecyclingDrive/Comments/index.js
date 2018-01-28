@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -16,7 +10,7 @@ import {
 import Touchable from 'react-native-platform-touchable';
 
 import styles from './style';
-import TwoIconMenuHeader from '../../partials/TwoIconMenu/index';
+import BackMenuHeader from '../../partials/BackMenuHeader/index';
 import CloudLayout from '../../partials/Cloud/index';
 
 export default class RecyclingDriveCommentScreen extends Component {
@@ -30,7 +24,7 @@ export default class RecyclingDriveCommentScreen extends Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <TwoIconMenuHeader menuTitle="RECYCLING DRIVE" />
+        <BackMenuHeader menuTitle="RECYCLING DRIVE" />
 
         <View style={[styles.body]}>
           <View style={[styles.pageIndicator]}>
@@ -41,10 +35,7 @@ export default class RecyclingDriveCommentScreen extends Component {
               <CloudLayout cloudText="UPDATES (3)" linkTo="recyclingdriveupdate" isActive={false} bgColor="#ee8c3c" />
             </View>
             <View style={[styles.backerCloud]}>
-              <CloudLayout cloudText="BACKERS (3)" linkTo="recyclingdrivebacker" isActive={false} bgColor="#3bb866" />
-            </View>
-            <View style={[styles.backerCloud]}>
-              <CloudLayout cloudText="COMMENTS (54)" linkTo="recyclingdrivecomment" isActive bgColor="#eb3a46" />
+              <CloudLayout cloudText="COMMENTS (54)" linkTo="recyclingdrivecomment" isActive bgColor="#3bb866" />
             </View>
           </View>
 
@@ -61,7 +52,7 @@ export default class RecyclingDriveCommentScreen extends Component {
                   <View style={[styles.addUpdate]}>
                     <TextInput
                       placeholder="add your comment"
-                      style={{ height: 57, backgroundColor: '#dedede', paddingHorizontal: 15 }}
+                      style={{ height: 57, backgroundColor: '#eeeeee', paddingHorizontal: 15 }}
                     />
                     <Text style={[styles.inputChar]}>500/500</Text>
                     <Touchable style={[styles.green, styles.btnTouchable]}>
@@ -86,7 +77,7 @@ export default class RecyclingDriveCommentScreen extends Component {
                         <Text style={[styles.time]}>3 days ago</Text>
                       </View>
                       <View style={[styles.textContainer]}>
-                        <Text style={[styles.title]}>JANE <Text style={[styles.labelText, styles.orange]}>OWNER</Text></Text>
+                        <Text style={[styles.title]}>JANE <Text style={[styles.labelText, styles.orange]}> OWNER </Text></Text>
                         <Text style={[styles.commentText]}>
                           Lorem ipsum dolor sit amet, quo te copiosae periculis. Qui no animal voluptua vituperata, ut nec vitae tantas eirmod. An agam purto dissentiunt est. Option elaboraret eam in, his at quaeque legendos. Pri no eloquentiam consectetuer. Cu argumentum mediocritatem pro.
                         </Text>

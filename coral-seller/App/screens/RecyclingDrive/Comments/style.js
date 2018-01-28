@@ -91,7 +91,7 @@ export default StyleSheet.create({
   commentList: {
     marginTop: 58,
     marginHorizontal: -40,
-    backgroundColor: '#dedede',
+    backgroundColor: '#eeeeee',
 
   },
   list: {
@@ -142,7 +142,7 @@ export default StyleSheet.create({
   labelText: {
     fontSize: 7.5,
     fontFamily: 'open-sans-semibold',
-    marginLeft: 80,
+    marginLeft: 80
   },
   orange: {
     backgroundColor: '#ee8c3c',

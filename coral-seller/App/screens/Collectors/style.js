@@ -5,17 +5,15 @@ export default StyleSheet.create({
     flex: 1,
   },
   body: {
-    // paddingHorizontal: 53,
     paddingTop: 10
   },
-  pageIndicator: {
-    flexDirection: 'row',
-    paddingHorizontal: Dimensions.get('window').width > 320 ? 31 : 10
-  },
-  backerCloud: {
-    flex: 1,
-    marginHorizontal: 3,
-    marginBottom: 17
+  notification: {
+    fontSize: 12.5,
+    color: '#ec3b47',
+    fontFamily: 'Oswald-Regular',
+    lineHeight: 12.5,
+    marginLeft: 13,
+    paddingBottom: 20
   },
   pageView: {
     paddingHorizontal: 13
@@ -38,6 +36,10 @@ export default StyleSheet.create({
     paddingTop: 11,
     paddingBottom: 7
   },
+  name: {
+    flexDirection: 'row',
+    marginBottom: 10
+  },
   title: {
     fontSize: 12.5,
     color: '#1f1f1d',
@@ -48,20 +50,21 @@ export default StyleSheet.create({
     color: '#0f83d3',
     fontSize: 10,
     lineHeight: 13.7,
+    marginLeft: 10,
     fontFamily: 'open-sans-semibold'
   },
-  backer: {
-    color: '#ec3b47',
+  description: {
+    color: '#6a6a6a',
     fontSize: 10,
     lineHeight: 13.7,
     fontFamily: 'open-sans-semibold'
   },
-  pledged: {
-    color: '#3bb966',
+  phone: {
+    color: '#6a6a6a',
     fontSize: 10,
     position: 'absolute',
     top: 11,
-    right: 20,
-    fontFamily: 'open-sans-semibold'
+    right: 15,
+    fontFamily: 'open-sans-semibold',
   }
 });

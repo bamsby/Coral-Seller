@@ -4,16 +4,6 @@ export default StyleSheet.create({
   container: {
     flex: 1,
   },
-  stepIndicatorContainer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    marginTop: 22,
-    marginBottom: 64
-  },
-  circleIcon: {
-    marginHorizontal: 8
-  },
-
   inputStyle: {
     height: 42,
     backgroundColor: '#cfcecd',
@@ -24,20 +14,31 @@ export default StyleSheet.create({
     alignItems: 'stretch',
     marginBottom: 10,
   },
-
-  form: {
-    paddingHorizontal: Dimensions.get('window').width > 320 ? 66 : 26
+  cameraContainer: {
+    alignItems: 'stretch',
+    paddingBottom: 30,
+    paddingTop: 30,
+    backgroundColor: '#cfcecd',
   },
-  inputChar: {
-    textAlign: 'right',
-    fontSize: 13,
-    color: '#8d8d8c',
-    marginTop: 5.5
+  form: {
+    marginTop: 50,
+    paddingHorizontal: Dimensions.get('window').width > 320 ? 66 : 26
   },
   selectStyle: {
     height: 42,
     backgroundColor: '#cfcecd',
     borderRadius: 0
+  },
+  cameraLogo: {
+    height: 65,
+    width: 70,
+    alignSelf: 'center'
+  },
+  photoText: {
+    fontSize: 12,
+    color: '#000',
+    fontFamily: 'Oswald-Regular',
+    alignSelf: 'center'
   },
   btnText: {
     fontSize: 16,
@@ -46,22 +47,13 @@ export default StyleSheet.create({
   },
   btnTouchable: {
     alignItems: 'center',
-    // paddingVertical: 14,
-    marginBottom: 8,
-    width: 112.5,
+    width: 200,
     alignSelf: 'center',
-    marginTop: 18,
+    marginTop: 30,
     height: 41,
     justifyContent: 'center'
   },
   greenBtn: {
     backgroundColor: '#3dbb69'
   },
-  chbxBtn: {
-    flex: 1,
-    padding: 5.5,
-    marginHorizontal: 4,
-    alignItems: 'center',
-    backgroundColor: '#c9c8c6'
-  }
 });

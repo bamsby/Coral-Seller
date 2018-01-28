@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -15,7 +9,7 @@ import {
 import Touchable from 'react-native-platform-touchable';
 
 import styles from './style';
-import MenuHeader from '../partials/MenuHeader/index';
+import BackMenuHeader from '../partials/BackMenuHeader/index';
 
 export default class AccountSettingScreen extends Component {
   constructor(props) {
@@ -31,7 +25,7 @@ export default class AccountSettingScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <MenuHeader menuTitle="ACCOUNT SETTINGS" />
+        <BackMenuHeader menuTitle="ACCOUNT SETTINGS" />
 
         <View style={[styles.body]}>
           <View style={[styles.form]}>

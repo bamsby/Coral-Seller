@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -20,8 +14,8 @@ export default class ForgotPswdScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: 'email',
-    }
+      // email: 'email'
+    };
   }
 
   render() {
@@ -40,7 +34,8 @@ export default class ForgotPswdScreen extends Component {
             <View style={[styles.inputField]}>
               <TextInput
                 onChangeText={(text) => this.setState({ email: text })}
-                value={this.state.email}
+                // value={this.state.email}
+                placeholder="email"
                 style={[styles.inputStyle]}
               />
             </View>

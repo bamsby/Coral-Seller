@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -18,7 +12,7 @@ import QRCode from 'react-native-qrcode';
 import Modal from 'react-native-modal';
 import Touchable from 'react-native-platform-touchable';
 import styles from './style';
-import GreenMenuHeader from '../partials/GreenHeader/index';
+import BackMenuHeader from '../partials/BackMenuHeader/index';
 
 export default class PaymentScreen extends Component {
   constructor(props) {
@@ -38,7 +32,7 @@ export default class PaymentScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <GreenMenuHeader menuTitle="PAYMENT" />
+        <BackMenuHeader menuTitle="PAYMENT" />
         <View style={[styles.qrcodecontainer]}>
           <QRCode
             value="Hello"

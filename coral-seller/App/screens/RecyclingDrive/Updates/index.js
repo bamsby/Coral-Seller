@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -16,7 +10,7 @@ import {
 import Touchable from 'react-native-platform-touchable';
 
 import styles from './style';
-import TwoIconMenuHeader from '../../partials/TwoIconMenu/index';
+import BackMenuHeader from '../../partials/BackMenuHeader/index';
 import CloudLayout from '../../partials/Cloud/index';
 
 export default class RecyclingDriveUpdateScreen extends Component {
@@ -24,13 +18,13 @@ export default class RecyclingDriveUpdateScreen extends Component {
     super(props);
     this.state = {
       haveUpdates: true
-    }
+    };
   }
 
   render() {
     return (
       <ScrollView style={styles.container}>
-        <TwoIconMenuHeader menuTitle="RECYCLING DRIVE" />
+        <BackMenuHeader menuTitle="RECYCLING DRIVE" />
 
         <View style={[styles.body]}>
           <View style={[styles.pageIndicator]}>
@@ -41,10 +35,7 @@ export default class RecyclingDriveUpdateScreen extends Component {
               <CloudLayout cloudText="UPDATES (3)" linkTo="recyclingdriveupdate" isActive bgColor="#ee8c3c" />
             </View>
             <View style={[styles.backerCloud]}>
-              <CloudLayout cloudText="BACKERS (3)" linkTo="recyclingdrivebacker" isActive={false} bgColor="#3bb866" />
-            </View>
-            <View style={[styles.backerCloud]}>
-              <CloudLayout cloudText="COMMENTS (54)" linkTo="recyclingdrivecomment" isActive={false} bgColor="#eb3a46" />
+              <CloudLayout cloudText="COMMENTS (54)" linkTo="recyclingdrivecomment" isActive={false} bgColor="#3bb866" />
             </View>
           </View>
 
@@ -53,15 +44,6 @@ export default class RecyclingDriveUpdateScreen extends Component {
               this.state.haveUpdates
                 ?
                 <View>
-                  <View style={[styles.addUpdate]}>
-                    <TextInput
-                      placeholder="add your comment"
-                      style={{ height: 34, backgroundColor: '#dedede', paddingHorizontal: 15 }}
-                    />
-                    <Touchable style={[styles.orange, styles.btnTouchable]}>
-                      <Text style={styles.btnText}>POST UPDATE</Text>
-                    </Touchable>
-                  </View>
                   <View style={[styles.commentList]}>
                     <View style={[styles.list]}>
                       <View style={[styles.mediaContainer]}>

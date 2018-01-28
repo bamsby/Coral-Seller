@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -16,10 +10,10 @@ import Touchable from 'react-native-platform-touchable';
 import * as Progress from 'react-native-progress';
 
 import styles from './style';
-import MenuHeader from '../partials/MenuHeader/index';
+import MenuHeaderCreate from '../partials/MenuHeaderCreate/index';
 import CloudLayout from '../partials/Cloud/index';
 
-export default class MyCampaignsScreen extends Component {
+export default class BrowseCampaignsScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,7 +27,7 @@ export default class MyCampaignsScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <MenuHeader menuTitle="MY CAMPAIGNS" />
+        <MenuHeaderCreate menuTitle="BROWSE CAMPAIGNS" />
 
         <View style={[styles.body]}>
           <View style={[styles.pageIndicator]}>
