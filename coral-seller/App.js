@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import firebase from 'firebase';
+import * as firebase from 'firebase';
 import ReduxThunk from 'redux-thunk';
 import { Font } from 'expo';
 
@@ -24,9 +24,10 @@ export default class App extends React.Component {
       storageBucket: 'coral-d0362.appspot.com',
       messagingSenderId: '878150861542'
     };
-
+    
     firebase.initializeApp(config);
-
+    // const db = firebase.firestore();
+    
     await Font.loadAsync({
       'Oswald-Regular': require('./assets/fonts/Oswald-Regular.ttf'),
       'oswald-bold': require('./assets/fonts/Oswald-Bold.ttf'),
@@ -41,7 +42,7 @@ export default class App extends React.Component {
   }
   render() {
     const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
-
+    
     console.log(this.state.fontLoaded);
     return (
       this.state.fontLoaded

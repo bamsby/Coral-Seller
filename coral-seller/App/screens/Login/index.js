@@ -81,6 +81,10 @@ class LoginScreen extends Component {
               </Touchable>
             </View>
 
+            <Text style={[styles.errorTextStyle]}>
+              {this.props.error}
+            </Text>
+
             <View style={[styles.socialBtnGrp]}>
               <Touchable style={[styles.fb, styles.socialBtnTouchable]}>
                 <FontAwesome name="facebook" style={styles.btnText} />

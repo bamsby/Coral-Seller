@@ -8,21 +8,14 @@ import {
 } from 'react-native';
 import Touchable from 'react-native-platform-touchable';
 import * as Progress from 'react-native-progress';
+import firebase from 'firebase';
 
 import styles from './style';
 import MenuHeaderCreate from '../partials/MenuHeaderCreate/index';
 import CloudLayout from '../partials/Cloud/index';
 
 export default class BrowseCampaignsScreen extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: 'Email Address',
-      npswd: 'New Password',
-      rpswd: 'Re-enter Password',
-      cpswd: 'Current Password',
-    };
-  }
+  // docRef = firebase.firestore().db.collection('campaign');
 
   render() {
     return (
@@ -42,7 +35,7 @@ export default class BrowseCampaignsScreen extends Component {
           <View style={[styles.pageView]}>
             <View style={[styles.champaignCard]}>
               <View style={[styles.cardHeader]}>
-                <Text style={[styles.cardTitle]}>RECYCLING DRIVE</Text>
+                <Text style={[styles.cardTitle]}>Recycling Drive</Text>
                 <Text style={[styles.authorText]}>by Kolam Ayer Whampoa South RC</Text>
                 <Text style={[styles.cardText]}>
                   Lorem ipsum dolor sit amet, quo te copiosae periculis.

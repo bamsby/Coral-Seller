@@ -11,18 +11,20 @@ export default StyleSheet.create({
   },
   overlayContainer: {
     backgroundColor: 'rgba(50, 46, 63, 0.75);',
-    // flex: 1,
     position: 'absolute',
     top: 40,
     right: 0,
     left: 0,
-    // bottom: 0,
     marginHorizontal: Dimensions.get('window').width > 320 ? 40 : 20,
     marginVertical: 54,
     paddingHorizontal: 23,
     paddingBottom: 16,
     paddingTop: 8,
-    // alignItems: 'center'
+  },
+  errorTextStyle: {
+    fontSize: 12,
+    alignSelf: 'center',
+    color: 'red'
   },
   logo: {
     height: 65,
