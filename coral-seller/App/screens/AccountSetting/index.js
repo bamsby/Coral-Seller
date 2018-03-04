@@ -9,32 +9,55 @@ import {
 import Touchable from 'react-native-platform-touchable';
 
 import styles from './style';
-import BackMenuHeader from '../partials/BackMenuHeader/index';
+import MenuHeader from '../partials/MenuHeader/index';
+import Drawer from 'react-native-drawer'
+import SidebarScreen from '../Sidebar/index'
 
 export default class AccountSettingScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // email: 'Email Address',
-      // npswd: 'New Password',
-      // rpswd: 'Re-enter Password',
-      // cpswd: 'Current Password',
+      email: 'Email Address',
+      npswd: 'New Password',
+      rpswd: 'Re-enter Password',
+      cpswd: 'Current Password',
     };
   }
 
+  openSideBar = () => {
+    this._drawer.open()
+  };
+
   render() {
     return (
+      <Drawer
+        ref={(ref) => this._drawer = ref}
+        content={<SidebarScreen active="settings"/>}
+        side="left"
+        acceptTap={true}
+        tapToClose={true}
+        acceptDoubleTap
+        acceptPan
+        captureGestures={true}
+        tweenDuration={200}
+        tweenEasing={'linear'}
+        panThreshold={0.08}
+        openDrawerOffset={(viewport) => {
+                    return 100
+                }}
+        closedDrawerOffset={0}
+      >
       <View style={styles.container}>
-        <BackMenuHeader menuTitle="ACCOUNT SETTINGS" />
+        <MenuHeader menuTitle="ACCOUNT SETTINGS" openSidebar={this.openSideBar} />
 
         <View style={[styles.body]}>
           <View style={[styles.form]}>
             <View style={[styles.inputField]}>
               <TextInput
                 onChangeText={(text) => this.setState({ email: text })}
-                // value={this.state.email}
-                placeholder="Email Address"
+                value={this.state.email}
                 style={[styles.inputStyle]}
+                underlineColorAndroid='transparent'
               />
             </View>
 
@@ -50,27 +73,27 @@ export default class AccountSettingScreen extends Component {
             <View style={[styles.inputField]}>
               <TextInput
                 onChangeText={(text) => this.setState({ npswd: text })}
-                // value={this.state.npswd}
-                placeholder="New Password"
+                value={this.state.npswd}
                 style={[styles.inputStyle]}
+                underlineColorAndroid='transparent'
               />
             </View>
 
             <View style={[styles.inputField]}>
               <TextInput
                 onChangeText={(text) => this.setState({ rpswd: text })}
-                // value={this.state.rpswd}
-                placeholder="Re-enter Password"
+                value={this.state.rpswd}
                 style={[styles.inputStyle]}
+                underlineColorAndroid='transparent'
               />
             </View>
 
             <View style={[styles.inputField]}>
               <TextInput
                 onChangeText={(text) => this.setState({ cpswd: text })}
-                // value={this.state.cpswd}
-                placeholder="Current Password"
+                value={this.state.cpswd}
                 style={[styles.inputStyle]}
+                underlineColorAndroid='transparent'
               />
             </View>
 
@@ -87,6 +110,7 @@ export default class AccountSettingScreen extends Component {
         </View>
 
       </View>
+      </Drawer>
     );
   }
 }

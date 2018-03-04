@@ -13,16 +13,20 @@ import { Actions } from 'react-native-router-flux';
 
 import styles from './style';
 import { emailChanged, passwordChanged, loginUser } from '../../../actions';
-import { Spinner } from '../../common/Spinner';
+import { Spinner } from '../../common';
 
 
 class LoginScreen extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      //uname: 'Username / email',
-      //pswd: 'Password'
-    };
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     //uname: 'Username / email',
+  //     //pswd: 'Password'
+  //   };
+  // }
+  componentDidMount() {
+    this.props.emailChanged("");
+    this.props.passwordChanged("");
   }
 
   onEmailChange(text) {
@@ -59,7 +63,8 @@ class LoginScreen extends Component {
           <View style={[styles.form]}>
             <View style={[styles.inputField]}>
               <TextInput
-                placeholder="Email"              
+                placeholder="Email"
+                value={this.props.email}
                 onChangeText={this.onEmailChange.bind(this)}
                 style={[styles.inputStyle]}
               />
@@ -67,7 +72,8 @@ class LoginScreen extends Component {
 
             <View style={[styles.inputField]}>
               <TextInput
-                placeholder="Password"              
+                placeholder="Password"
+                value={this.props.password}
                 onChangeText={this.onPasswordChange.bind(this)}
                 style={[styles.inputStyle]}
                 secureTextEntry
@@ -98,7 +104,7 @@ class LoginScreen extends Component {
               <Text style={[styles.forgotPswdLink]}>Forgot your password?</Text>
             </Touchable>
 
-            <Touchable style={[styles.greenBtn, styles.btnTouchable, { marginTop: 13 }]} onPress={() => Actions.browsecampaign()}>
+            <Touchable style={[styles.greenBtn, styles.btnTouchable, { marginTop: 13 }]} onPress={() => Actions.home()}>
               <Text style={[styles.btnText]}>BROWSE CAMPAIGNS</Text>
             </Touchable>
           </View>

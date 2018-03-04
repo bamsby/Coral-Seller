@@ -26,7 +26,6 @@ export default class App extends React.Component {
     };
     
     firebase.initializeApp(config);
-    // const db = firebase.firestore();
     
     await Font.loadAsync({
       'Oswald-Regular': require('./assets/fonts/Oswald-Regular.ttf'),

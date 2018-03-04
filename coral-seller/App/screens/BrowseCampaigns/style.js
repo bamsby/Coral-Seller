@@ -4,6 +4,67 @@ export default StyleSheet.create({
   container: {
     flex: 1,
   },
+  header:{
+    backgroundColor: '#1f1f1d',
+    paddingTop: 30,
+    paddingBottom: 5,
+    position: 'relative'
+  },
+  menuIcon: {
+    height: 22,
+    width: 22,
+    resizeMode: 'contain',
+  },
+  menuIconTouchable: {
+    position: 'absolute',
+    left: 11,
+    bottom: 8,
+    zIndex: 9,
+    padding: 5
+  },
+
+  title: {
+    fontSize: 15,
+    color: '#fff',
+    marginTop: 12,
+    textAlign: 'center',
+    fontFamily: 'Oswald-Regular'
+  },
+
+  row: {
+    flexDirection: 'row'
+  },
+  logo: {
+    width: 42,
+    height: 42,
+    resizeMode: 'cover'
+  },
+  logoContainer: {
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  logoText:{
+    fontSize: 20,
+    fontFamily: 'gotham-round',
+    color: '#55d400',
+  },
+  OswaldRegular: {
+    fontFamily: 'Oswald-Regular'
+  },
+  OpenSansSemiBold: {
+    fontFamily: 'open-sans-semibold'
+  },
+  greenBtn: {
+    height: 23,
+    paddingHorizontal: 7,
+    backgroundColor: '#38b663',
+    position: 'absolute',
+    right: 10,
+    bottom: 13
+  },
+  btnText: {
+    color: '#fff'
+  },
   body: {
     // paddingHorizontal: 53,
     paddingTop: 10

@@ -48,11 +48,11 @@ export default StyleSheet.create({
     borderLeftColor: 'transparent',
   },
   triangleContainer: {
-    position: 'absolute',
-    bottom: -10,
+    // position: 'absolute',
+    // bottom: 0,
     justifyContent: 'center',
-    left: 0,
-    right: 0,
+    // left: 0,
+    // right: 0,
     alignItems: 'center'
   },
   noUpdateTextAreaContainer: {
@@ -91,7 +91,7 @@ export default StyleSheet.create({
   commentList: {
     marginTop: 58,
     marginHorizontal: -40,
-    backgroundColor: '#eeeeee',
+    backgroundColor: '#dedede',
 
   },
   list: {
@@ -142,7 +142,7 @@ export default StyleSheet.create({
   labelText: {
     fontSize: 7.5,
     fontFamily: 'open-sans-semibold',
-    marginLeft: 80
+    marginLeft: 80,
   },
   orange: {
     backgroundColor: '#ee8c3c',

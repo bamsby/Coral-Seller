@@ -1,3 +1,9 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
+
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -10,21 +16,21 @@ import {
 import Touchable from 'react-native-platform-touchable';
 
 import styles from './style';
-import BackMenuHeader from '../../partials/BackMenuHeader/index';
+import TwoIconMenuHeader from '../../partials/TwoIconMenu/index';
 import CloudLayout from '../../partials/Cloud/index';
 
 export default class RecyclingDriveCommentScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      haveUpdates: true
+      haveUpdates: false
     };
   }
 
   render() {
     return (
       <ScrollView style={styles.container}>
-        <BackMenuHeader menuTitle="RECYCLING DRIVE" />
+        <TwoIconMenuHeader menuTitle="RECYCLING DRIVE" />
 
         <View style={[styles.body]}>
           <View style={[styles.pageIndicator]}>
@@ -35,7 +41,10 @@ export default class RecyclingDriveCommentScreen extends Component {
               <CloudLayout cloudText="UPDATES (3)" linkTo="recyclingdriveupdate" isActive={false} bgColor="#ee8c3c" />
             </View>
             <View style={[styles.backerCloud]}>
-              <CloudLayout cloudText="COMMENTS (54)" linkTo="recyclingdrivecomment" isActive bgColor="#3bb866" />
+              <CloudLayout cloudText="BACKERS (3)" linkTo="recyclingdrivebacker" isActive={false} bgColor="#3bb866" />
+            </View>
+            <View style={[styles.backerCloud]}>
+              <CloudLayout cloudText="COMMENTS (54)" linkTo="recyclingdrivecomment" isActive bgColor="#eb3a46" />
             </View>
           </View>
 
@@ -52,7 +61,8 @@ export default class RecyclingDriveCommentScreen extends Component {
                   <View style={[styles.addUpdate]}>
                     <TextInput
                       placeholder="add your comment"
-                      style={{ height: 57, backgroundColor: '#eeeeee', paddingHorizontal: 15 }}
+                      style={{height: 77, backgroundColor:'#dedede', paddingHorizontal: 15}}
+                      underlineColorAndroid='transparent'
                     />
                     <Text style={[styles.inputChar]}>500/500</Text>
                     <Touchable style={[styles.green, styles.btnTouchable]}>
@@ -62,7 +72,9 @@ export default class RecyclingDriveCommentScreen extends Component {
                   <View style={[styles.commentList]}>
                     <View style={[styles.list]}>
                       <View style={[styles.mediaContainer]}>
-                        <View style={[styles.media]} />
+                        <View style={[styles.media]} >
+                          <Image source={require('../../../../assets/images/profile.png')} />
+                        </View>
                       </View>
                       <View style={[styles.textContainer]}>
                         <Text style={[styles.title]}>JANE</Text>
@@ -77,7 +89,8 @@ export default class RecyclingDriveCommentScreen extends Component {
                         <Text style={[styles.time]}>3 days ago</Text>
                       </View>
                       <View style={[styles.textContainer]}>
-                        <Text style={[styles.title]}>JANE <Text style={[styles.labelText, styles.orange]}> OWNER </Text></Text>
+                        <Text style={[styles.title]}>JANE <Text
+                          style={[styles.labelText, styles.orange]}>OWNER</Text></Text>
                         <Text style={[styles.commentText]}>
                           Lorem ipsum dolor sit amet, quo te copiosae periculis. Qui no animal voluptua vituperata, ut nec vitae tantas eirmod. An agam purto dissentiunt est. Option elaboraret eam in, his at quaeque legendos. Pri no eloquentiam consectetuer. Cu argumentum mediocritatem pro.
                         </Text>
@@ -117,15 +130,16 @@ export default class RecyclingDriveCommentScreen extends Component {
                 <View style={[styles.noUpdateView]}>
                   <View style={[styles.noUpdateTextContainer]}>
                     <Text style={[styles.noUpdateText]}>Looks like you haven’t got or added any comments</Text>
-                    <View style={[styles.triangleContainer]} >
-                      <View style={[styles.triangle]} />
-                    </View>
+                  </View>
+                  <View style={[styles.triangleContainer]}>
+                    <View style={[styles.triangle]} />
                   </View>
                   <View style={[styles.noUpdateTextAreaContainer]}>
                     <TextInput
                       placeholder="Update your comments"
                       style={[styles.noUpdateTextArea]}
                       multiline
+                      underlineColorAndroid='transparent'
                     />
                   </View>
                   <Text style={[styles.inputChar]}>500/500</Text>
