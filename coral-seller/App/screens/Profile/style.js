@@ -10,7 +10,7 @@ export default StyleSheet.create({
     paddingTop: 30,
     paddingBottom: 17,
     position: 'relative',
-    flex: 2.4
+    flex: 0.9
   },
   body: {
     flex: 2
@@ -118,8 +118,15 @@ export default StyleSheet.create({
     paddingTop: 5,
     marginRight: 10
   },
-  btnTouchable: {
+  payBtnTouchable: {
     backgroundColor: '#eb3a46',
+    // paddingHorizontal: 47,
+    paddingVertical: 10,
+    width: 123,
+    alignItems: 'center'
+  },
+  redeemBtnTouchable: {
+    backgroundColor: '#3bb866',
     // paddingHorizontal: 47,
     paddingVertical: 10,
     width: 123,
@@ -131,6 +138,11 @@ export default StyleSheet.create({
     fontFamily: 'Oswald-Regular'
   },
   payBtn: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center'
+  },
+  redeemBtn: {
     flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center'

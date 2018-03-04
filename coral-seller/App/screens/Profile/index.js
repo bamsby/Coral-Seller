@@ -15,9 +15,9 @@ import {
 } from 'react-native';
 import Touchable from 'react-native-platform-touchable';
 import {FontAwesome} from '@expo/vector-icons';
-import {Actions} from 'react-native-router-flux'
-import Drawer from 'react-native-drawer'
-import SidebarScreen from '../Sidebar/index'
+import {Actions} from 'react-native-router-flux';
+import Drawer from 'react-native-drawer';
+import SidebarScreen from '../Sidebar/index';
 
 import styles from './style'
 
@@ -26,7 +26,7 @@ export default class ProfileScreen extends Component {
     super(props);
     this.state = {
       titleChange: false,
-      title: 'Kolam Ayer RC',
+      title: 'Christopher Tan',
       desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'+
       'Quia dolori non voluptas contraria est, sed doloris privatio.'+
       'Nos cum te, M. Cupit enim dícere nihil posse ad beatam vitam'+
@@ -36,8 +36,8 @@ export default class ProfileScreen extends Component {
     'videantur. Sit enim idem caecus, debilis. Graece donan, Latine voluptatem vocant.',
       descChange: false,
       contactChange: false,
-      phone:'+0000000000',
-      email: 'kolamayer@gmail.com'
+      phone:'+6591234567',
+      email: 'chris@gmail.com'
     }
   }
 
@@ -94,15 +94,6 @@ export default class ProfileScreen extends Component {
                 <Touchable style={[styles.editProfileText]} onPress={() => this.setState({descChange: true})}>
                   <Image source={require('../../../assets/images/pencil.png')}/>
                 </Touchable>
-                {/*<Text style={[styles.profileText]}>*/}
-                  {/*Lorem ipsum dolor sit amet, consectetur adipiscing elit.*/}
-                  {/*Quia dolori non voluptas contraria est, sed doloris privatio.*/}
-                  {/*Nos cum te, M. Cupit enim dícere nihil posse ad beatam vitam*/}
-                  {/*deesse sapienti. Sed in rebus apertissimis nimium longi sumus.*/}
-                  {/*Duo Reges: constructio interrete. Apparet statim, quae sint officia,*/}
-                   {/*quae actiones. Potius inflammat, ut coercendi magis quam dedocendi esse*/}
-                   {/*videantur. Sit enim idem caecus, debilis. Graece donan, Latine voluptatem vocant.*/}
-                {/*</Text>*/}
                 <TextInput placeholder={this.state.desc}
                            multiline={true}
                            onChangeText={(text) => this.setState({desc: text})}
@@ -135,30 +126,43 @@ export default class ProfileScreen extends Component {
                 </Touchable>
               </View>
             </View>
-
           </View>
 
-          <View style={[styles.body]}>
+          <ScrollView style={[styles.body]}>
             <View style={[styles.row, styles.block]}>
               <View style={[styles.amountBlock]}>
                 <Text style={[styles.label]}>ACCOUNT BALANCE</Text>
                 <View style={[styles.row]}>
-                  <Text style={[styles.amount]}> $1000</Text>
+                  <Text style={[styles.amount]}> $9.80</Text>
                   <View style={{backgroundColor: '#3bb866', justifyContent: 'center', paddingHorizontal: 15}}>
                     <FontAwesome name="history" size={15} color="#fff"/>
                   </View>
                 </View>
               </View>
               <View style={[styles.payBtn]}>
-                <Touchable style={[styles.btnTouchable]} onPress={() => Actions.payment()}>
-                  <Text style={[styles.btnText]}>PAY</Text>
+                <Touchable style={[styles.payBtnTouchable]} onPress={() => Actions.payment()}>
+                  <Text style={[styles.btnText]}>RECEIVE</Text>
+                </Touchable>
+              </View>
+            </View>
+
+            <View style={[styles.row, styles.block]}>
+              <View style={[styles.amountBlock]}>
+                <Text style={[styles.label]}>REWARD POINTS</Text>
+                <View style={[styles.row]}>
+                  <Text style={[styles.amount]}> 128</Text>
+                </View>
+              </View>
+              <View style={[styles.redeemBtn]}>
+                <Touchable style={[styles.redeemBtnTouchable]} onPress={() => Actions.payment()}>
+                  <Text style={[styles.btnText]}>REDEEM</Text>
                 </Touchable>
               </View>
             </View>
 
             <View style={[styles.row, styles.block]}>
               <View style={[styles.topupBlock]}>
-                <Text style={[styles.label, {marginBottom: 10}]}>TOP-UP</Text>
+                <Text style={[styles.label, {marginBottom: 10}]}>WITHDRAWAL</Text>
                 <Image source={require('../../../assets/images/topup.png')} style={[styles.topupIcon]}/>
               </View>
               <View style={[styles.row , {flex: 4, alignItems: 'flex-end', marginRight: 45}]}>
@@ -179,7 +183,7 @@ export default class ProfileScreen extends Component {
                 </View>
               </View>
             </View>
-          </View>
+          </ScrollView>
         </View>
       </Drawer>
     );
